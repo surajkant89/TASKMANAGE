@@ -372,6 +372,18 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         header.appendChild(profileInfo);
     }
+// Register the service worker
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js')
+            .then(reg => {
+                console.log('Service Worker registered ✅', reg);
+            })
+            .catch(err => {
+                console.error('Service Worker registration failed ❌', err);
+            });
+    });
+}
 
     // Initialize the app
     init();
