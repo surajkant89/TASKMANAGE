@@ -2,7 +2,7 @@
     "name": "Task Manager",
     "short_name": "TaskManager",
     "description": "A progressive web app for managing your tasks",
-    "start_url": "/index.html",
+    "start_url": "/TASKMANAGE/index.html",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#ffffff",
