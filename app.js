@@ -373,7 +373,11 @@ document.addEventListener('DOMContentLoaded', function() {
         header.appendChild(profileInfo);
     }
 // Register the service worker
-if ('serviceWorker' in navigator) {
+
+
+    // Initialize the app
+    init();
+    if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('./service-worker.js')
             .then(reg => {
@@ -384,7 +388,4 @@ if ('serviceWorker' in navigator) {
             });
     });
 }
-
-    // Initialize the app
-    init();
 });
